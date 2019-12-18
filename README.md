@@ -28,3 +28,10 @@ XXX.XXX.XX.XXX github.com       //XXX.XXX.XX.XXX为使用上面的nslook指令�
 最后使用指令 sudo /etc/init.d/networking restart 刷新DNS缓存
 ```
 **尝试发现网速变成了300~500KB/s，亲测有效。**
+
+## 在make到97%的时候突然停止，Ubuntu警告：内存不足。
+```
+由于最初创建虚拟机的时候只分配了40个G的内存给Ubuntu，所以导致内存不够。
+于是退出虚拟机，在VMware中重新给Ubuntu分配了200个G的内存，并且进入虚拟机中的磁盘，把新分配的内存全部拉满。
+重新make，以为要全部重新make一遍，结果发现是继续从97%开始make。最后make成功。
+```
