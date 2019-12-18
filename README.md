@@ -37,3 +37,13 @@ XXX.XXX.XX.XXX github.com       //XXX.XXX.XX.XXX为使用上面的nslook指令�
 于是退出虚拟机，在VMware中重新给Ubuntu分配了200个G的内存，并且进入虚拟机中的磁盘，把新分配的内存全部拉满。
 重新make，以为要全部重新make一遍，结果发现是继续从97%开始make。最后make成功。
 ```
+<br/>
+<br/>
+<br/>
+## 连接到SSH
+```
+使用指令 ssh-keygen -t rsa -C "XXXXX@qq.com" 连接到自己邮箱注册的github，并生成一段密码。
+再使用指令 cat ~/.ssh/id_rsa.pub 来获取得到生成的密码。
+
+
+```
