@@ -10,9 +10,7 @@ GSSAPIAuthentication no
 
 ```
 **尝试发现网速并没有变化，依然是几KB/s。**
-> 
-> 
->
+
 #### 方法二：
 ```
 使用指令 
@@ -29,3 +27,4 @@ XXX.XXX.XX.XXX github.com       //XXX.XXX.XX.XXX为使用上面的nslook指令�
 
 最后使用指令 sudo /etc/init.d/networking restart 刷新DNS缓存
 ```
+**尝试发现网速变成了300~500KB/s，亲测有效。**
