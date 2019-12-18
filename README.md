@@ -10,7 +10,7 @@ GSSAPIAuthentication no
 
 ```
 **尝试发现网速并没有变化，依然是几KB/s。**
-
+<br/>
 #### 方法二：
 ```
 使用指令 
@@ -28,7 +28,9 @@ XXX.XXX.XX.XXX github.com       //XXX.XXX.XX.XXX为使用上面的nslook指令�
 最后使用指令 sudo /etc/init.d/networking restart 刷新DNS缓存
 ```
 **尝试发现网速变成了300~500KB/s，亲测有效。**
-
+<br/>
+<br/>
+<br/>
 ## 在make到97%的时候突然停止，Ubuntu警告：内存不足。
 ```
 由于最初创建虚拟机的时候只分配了40个G的内存给Ubuntu，所以导致内存不够。
