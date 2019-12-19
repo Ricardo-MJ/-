@@ -43,6 +43,13 @@ XXX.XXX.XX.XXX github.com       //XXX.XXX.XX.XXX为使用上面的nslook指令�
 
 ## 连接到SSH
 ```
-使用指令 ssh-keygen -t rsa -C "XXXXX@qq.com" 连接到自己邮箱注册的github，并生成一段密码。
-再使用指令 cat ~/.ssh/id_rsa.pub 来获取得到生成的密码。
+使用指令 git remote add upstream https://github.com/vesoft-inc/nebula.git ，将项目的git地址，添加至本地的remote
+再使用指令 ssh-keygen -t rsa -C "XXXXX@qq.com" 连接到自己邮箱注册的github，并生成一段密码。
+最后使用指令 cat ~/.ssh/id_rsa.pub 来获取得到生成的密码。将密码复制到Github SSH中，完成。
 ```
+<br/>
+<br/>
+<br/>
+
+
+
