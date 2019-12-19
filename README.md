@@ -44,6 +44,4 @@ XXX.XXX.XX.XXX github.com       //XXX.XXX.XX.XXX为使用上面的nslook指令�
 ```
 使用指令 ssh-keygen -t rsa -C "XXXXX@qq.com" 连接到自己邮箱注册的github，并生成一段密码。
 再使用指令 cat ~/.ssh/id_rsa.pub 来获取得到生成的密码。
-
-
 ```
