@@ -52,4 +52,15 @@ XXX.XXX.XX.XXX github.com       //XXX.XXX.XX.XXX为使用上面的nslook指令�
 <br/>
 
 
+## 设置username和email
+```
+git config --global user.name "xxxx"
+git config --global user.email xxxxx@qq.com
+使用这两行代码来连接到自己的github。
+```
 
+## 修改完代码后，在 nebula/build 文件夹内直接make，速度很慢。
+```
+按理说，我只修改了很小一部分代码，make的过程应该比较快。但直接在nebula/build 内make，速度和最初的make差不多。
+于是我进入我修改的cpp文件的文件夹后，再进行make。make过程很迅速。
+```
