@@ -1,4 +1,6 @@
 # 大作业
+学号：18062026
+姓名：马明哲
 ## 在Ubuntu从github克隆的时候，下载速度只有不到10KB/s。于是去网上搜索解决方法。
 #### 方法一：
 ```
@@ -65,3 +67,52 @@ git config --global user.email xxxxx@qq.com
 于是我进入我修改的cpp文件的文件夹后，再进行make。make过程很迅速。
 ```
 
+## 修改代码
+```
+#define Kilo 1000.0
+#define Million 1000000.0
+
+double Count_Time(double t) {
+    double time;
+    if (t < Kilo)
+        time = t;
+    else if (t >= Kilo && t < Million)
+        time = (t / Kilo);
+    else if (t >= Million)
+        time = (t / Million);
+    return time;
+}//换算时间
+
+
+std::string Time_Unit(double t) {
+    std::string s;
+    if (t < Kilo)
+        s = "us)\n";
+    else if (t >= Kilo && t <Million)
+        s = " ms)\n";
+    else if (t >= Million)
+        s = " s)\n";
+    return s;
+}//换算时间单位
+
+if (resp.get_rows() && !resp.get_rows()->empty()) {
+            printResult(resp);
+            std::cout << "Got " << resp.get_rows()->size()
+                      << " rows (Time spent: "
+                      << Count_Time(resp.get_latency_in_us()) << "/"
+                      << Count_Time(dur.elapsedInUSec())
+                      << Time_Unit(resp.get_latency_in_us());
+        } else if (resp.get_rows()) {
+            std::cout << "Empty set (Time spent: "
+                      << Count_Time(resp.get_latency_in_us()) << "/"
+                      << Count_Time(dur.elapsedInUSec())
+                      << Time_Unit(resp.get_latency_in_us());
+        } else {
+            std::cout << "Execution succeeded (Time spent: "
+                      << Count_Time(resp.get_latency_in_us()) << "/"
+                      << Count_Time(dur.elapsedInUSec())
+                      << Time_Unit(resp.get_latency_in_us());
+        }
+```
+> 宏定义 Kilo 1000.0; Million 1000000.0。
+> 构造两个函数，Count_Time函数用来将时间的数值进行转换；Time_Unit函数将时间的单位进行转换。
