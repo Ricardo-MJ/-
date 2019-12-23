@@ -15,24 +15,28 @@ GSSAPIAuthentication no
 <br/>
 #### 方法二：
 ```
-使用指令 
 nslook global.ssl.fastly.NET
 nslook github.com
-来获取域名的IP地址
-
-再使用 sudo gedit /etc/hosts 指令
-进入host中
-加上如下两行：
-
+```
+> 来获取域名的IP地址
+```
+sudo gedit /etc/hosts
+```
+> 进入host中,加上如下两行：
+```
 XXX.XXX.XX.XXX global-ssl.fastly.Net    
 XXX.XXX.XX.XXX github.com       //XXX.XXX.XX.XXX为使用上面的nslook指令得到的IP地址
-
-最后使用指令 sudo /etc/init.d/networking restart 刷新DNS缓存
 ```
+```
+sudo /etc/init.d/networking restart
+```
+> 刷新DNS缓存
 **尝试发现网速变成了300~500KB/s，亲测有效。**
+
 <br/>
 <br/>
 <br/>
+
 ## 在make到97%的时候突然停止，Ubuntu警告：内存不足。
 ```
 由于最初创建虚拟机的时候只分配了40个G的内存给Ubuntu，所以导致内存不够。
@@ -45,21 +49,32 @@ XXX.XXX.XX.XXX github.com       //XXX.XXX.XX.XXX为使用上面的nslook指令�
 
 ## 连接到SSH
 ```
-使用指令 git remote add upstream https://github.com/vesoft-inc/nebula.git ，将项目的git地址，添加至本地的remote
-再使用指令 ssh-keygen -t rsa -C "XXXXX@qq.com" 连接到自己邮箱注册的github，并生成一段密码。
-最后使用指令 cat ~/.ssh/id_rsa.pub 来获取得到生成的密码。将密码复制到Github SSH中，完成。
+git remote add upstream https://github.com/vesoft-inc/nebula.git ，将项目的git地址，添加至本地的remote
 ```
-<br/>
-<br/>
-<br/>
+> 将项目的git地址，添加至本地的remote
+```
+ssh-keygen -t rsa -C "XXXXX@qq.com" 
+```
+> 连接到自己邮箱注册的github，并生成一段密码。
+```
+cat ~/.ssh/id_rsa.pub
+```
+> 获取得到生成的密码。将密码复制到Github SSH中，完成。
 
+<br/>
+<br/>
+<br/>
 
 ## 设置username和email
 ```
 git config --global user.name "xxxx"
 git config --global user.email xxxxx@qq.com
-使用这两行代码来连接到自己的github。
 ```
+> 使用这两行代码来连接到自己的github。
+
+<br/>
+<br/>
+<br/>
 
 ## 修改完代码后，在 nebula/build 文件夹内直接make，速度很慢。
 ```
