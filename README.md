@@ -1,5 +1,6 @@
 # 大作业
 学号：18062026
+<br/>
 姓名：马明哲
 ## 在Ubuntu从github克隆的时候，下载速度只有不到10KB/s。于是去网上搜索解决方法。
 #### 方法一：
@@ -9,7 +10,6 @@ sudo vim /etc/ssh/ssh_config
 将GSSAPIAuthentication yes
 改为
 GSSAPIAuthentication no
-
 ```
 **尝试发现网速并没有变化，依然是几KB/s。**
 <br/>
@@ -31,6 +31,7 @@ XXX.XXX.XX.XXX github.com       //XXX.XXX.XX.XXX为使用上面的nslook指令�
 sudo /etc/init.d/networking restart
 ```
 > 刷新DNS缓存
+
 **尝试发现网速变成了300~500KB/s，亲测有效。**
 
 <br/>
