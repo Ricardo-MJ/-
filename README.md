@@ -77,12 +77,6 @@ git config --global user.email xxxxx@qq.com
 <br/>
 <br/>
 
-## 修改完代码后，在 nebula/build 文件夹内直接make，速度很慢。
-```
-按理说，我只修改了很小一部分代码，make的过程应该比较快。但直接在nebula/build 内make，速度和最初的make差不多。
-于是我进入我修改的cpp文件的文件夹后，再进行make。make过程很迅速。
-```
-
 ## 修改代码
 ```c++
 #define Kilo 1000.0
@@ -132,3 +126,18 @@ if (resp.get_rows() && !resp.get_rows()->empty()) {
 ```
 宏定义 Kilo 1000.0; Million 1000000.0。
 构造两个函数，Count_Time函数用来将时间的数值进行转换；Time_Unit函数将时间的单位进行转换。
+
+<br/>
+<br/>
+<br/>
+
+## 提交代码
+### 修改完代码后，在 nebula/build 文件夹内直接make，速度很慢。
+    按理说，我只修改了很小一部分代码，make的过程应该比较快。但直接在nebula/build 内make，速度和最初的make差不多。
+于是我进入我修改的cpp文件的文件夹后，再进行make。make过程很迅速。
+
+<br/>
+
+```
+
+```
