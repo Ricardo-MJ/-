@@ -84,7 +84,7 @@ git config --global user.email xxxxx@qq.com
 ```
 
 ## 修改代码
-```
+```c++
 #define Kilo 1000.0
 #define Million 1000000.0
 
