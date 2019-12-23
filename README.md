@@ -130,5 +130,5 @@ if (resp.get_rows() && !resp.get_rows()->empty()) {
                       << Time_Unit(resp.get_latency_in_us());
         }
 ```
-> 宏定义 Kilo 1000.0; Million 1000000.0。
-> 构造两个函数，Count_Time函数用来将时间的数值进行转换；Time_Unit函数将时间的单位进行转换。
+宏定义 Kilo 1000.0; Million 1000000.0。
+构造两个函数，Count_Time函数用来将时间的数值进行转换；Time_Unit函数将时间的单位进行转换。
