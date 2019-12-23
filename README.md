@@ -18,11 +18,11 @@ GSSAPIAuthentication no
 nslook global.ssl.fastly.NET
 nslook github.com
 ```
-> 来获取域名的IP地址
+获取域名的IP地址
 ```
 sudo gedit /etc/hosts
 ```
-> 进入host中,加上如下两行：
+进入host中,并加上如下两行：
 ```
 XXX.XXX.XX.XXX global-ssl.fastly.Net    
 XXX.XXX.XX.XXX github.com       //XXX.XXX.XX.XXX为使用上面的nslook指令得到的IP地址
@@ -30,7 +30,7 @@ XXX.XXX.XX.XXX github.com       //XXX.XXX.XX.XXX为使用上面的nslook指令�
 ```
 sudo /etc/init.d/networking restart
 ```
-> 刷新DNS缓存
+刷新DNS缓存
 
 **尝试发现网速变成了300~500KB/s，亲测有效。**
 
@@ -52,15 +52,15 @@ sudo /etc/init.d/networking restart
 ```
 git remote add upstream https://github.com/vesoft-inc/nebula.git ，将项目的git地址，添加至本地的remote
 ```
-> 将项目的git地址，添加至本地的remote
+将项目的git地址，添加至本地的remote
 ```
 ssh-keygen -t rsa -C "XXXXX@qq.com" 
 ```
-> 连接到自己邮箱注册的github，并生成一段密码。
+连接到自己邮箱注册的github，并生成一段密码。
 ```
 cat ~/.ssh/id_rsa.pub
 ```
-> 获取得到生成的密码。将密码复制到Github SSH中，完成。
+获取得到生成的密码。将密码复制到Github SSH中，完成。
 
 <br/>
 <br/>
@@ -71,7 +71,7 @@ cat ~/.ssh/id_rsa.pub
 git config --global user.name "xxxx"
 git config --global user.email xxxxx@qq.com
 ```
-> 使用这两行代码来连接到自己的github。
+使用这两行代码来连接到自己的github。
 
 <br/>
 <br/>
