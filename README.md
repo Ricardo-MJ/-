@@ -50,9 +50,9 @@ sudo /etc/init.d/networking restart
 
 ## 连接到SSH
 ```
-git remote add upstream https://github.com/vesoft-inc/nebula.git ，将项目的git地址，添加至本地的remote
+git remote add upstream https://github.com/vesoft-inc/nebula.git
 ```
-将项目的git地址，添加至本地的remote
+将项目的git地址，添加至本地。
 ```
 ssh-keygen -t rsa -C "XXXXX@qq.com" 
 ```
@@ -139,5 +139,23 @@ if (resp.get_rows() && !resp.get_rows()->empty()) {
 <br/>
 
 ```
-
+git init
 ```
+将git初始化。
+```
+cd nebula
+git add ./
+```
+进入nebula文件夹，将文件夹内的所有文件都添加到仓库中，在这部之后，可以通过git status 来查看你此时本地文件里的位于分支master内含有的文件。
+```
+git commit -m "XXXX" //XXXX为提交的注释内容
+```
+使用git commit将文件从暂存区提交到本地版本库。
+```
+git pull origin xx1
+```
+拉取xx1分支代码，保持本地正在开发功能逻辑的代码分支代码是最新的，避免后续在提交时冲突过多或覆盖掉其他人的代码的问题出现。
+```
+git push
+```
+将代码上传的github中
